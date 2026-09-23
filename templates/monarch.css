@@ -1,0 +1,346 @@
+/* ==========================================================================
+   MONARCH // ARCHITECTURAL ATELIER & PRIVATE EXECUTIVE PRACTICE
+   Domain: Private Spatial Architecture, Sculptural Estates & Advisory
+   Aesthetic: Warm Bone/Stone Base, Deep Obsidian, Warm Gray & Muted Bronze
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Tenor+Sans&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --monarch-bg: #F5F2EB;
+  --monarch-surface: #FFFFFF;
+  --monarch-surface-stone: #EBE6DC;
+  --monarch-surface-bone: #F9F7F2;
+  --monarch-border: rgba(24, 23, 22, 0.12);
+  --monarch-border-bronze: rgba(156, 122, 83, 0.35);
+
+  --monarch-obsidian: #181716;
+  --monarch-obsidian-subtle: #242220;
+  --monarch-bronze: #9C7A53;
+  --monarch-bronze-light: #B8976C;
+  --monarch-bronze-dark: #7F5E38;
+  --monarch-stone: #827E77;
+  --monarch-stone-light: #B5B0A6;
+
+  --monarch-text: #181716;
+  --monarch-text-muted: #6B6760;
+  --monarch-text-dim: #99948C;
+
+  --font-monarch-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-monarch-sans: 'Tenor Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-monarch-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.monarch-theme {
+  background-color: var(--monarch-bg);
+  color: var(--monarch-text);
+  font-family: var(--font-monarch-body);
+  line-height: 1.75;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Studio Preview Bar (Understated Bronze/Obsidian Bar) */
+.haven-preview-bar {
+  background: #181716;
+  border-bottom: 1px solid rgba(156, 122, 83, 0.25);
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font-monarch-body);
+  font-size: 0.75rem;
+  position: relative;
+  z-index: 999;
+}
+.haven-preview-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.haven-preview-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #DDD8CE;
+}
+.haven-pill-studio {
+  background: rgba(156, 122, 83, 0.25);
+  color: var(--monarch-bronze-light);
+  padding: 0.15rem 0.55rem;
+  border-radius: 1px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.haven-preview-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.haven-back-link {
+  color: #B5B0A6;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.haven-back-link:hover {
+  color: #FFFFFF;
+}
+.haven-adopt-btn {
+  background: var(--monarch-bronze);
+  color: #FFFFFF;
+  padding: 0.25rem 0.85rem;
+  border-radius: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  transition: background 0.2s;
+}
+.haven-adopt-btn:hover {
+  background: var(--monarch-bronze-light);
+}
+
+/* Container */
+.monarch-container {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Standalone MONARCH Navbar */
+.monarch-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(245, 242, 235, 0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--monarch-border);
+}
+.monarch-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+}
+.monarch-brand {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.monarch-brand-title {
+  font-family: var(--font-monarch-sans);
+  font-size: 1.5rem;
+  letter-spacing: 0.22em;
+  font-weight: 400;
+  color: var(--monarch-obsidian);
+}
+.monarch-brand-sub {
+  font-size: 0.625rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--monarch-bronze);
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.monarch-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.75rem;
+}
+.monarch-nav-link {
+  font-family: var(--font-monarch-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--monarch-text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 0.5rem 0;
+}
+.monarch-nav-link:hover, .monarch-nav-link.active {
+  color: var(--monarch-obsidian);
+}
+
+.monarch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2rem;
+  font-family: var(--font-monarch-sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0px;
+}
+.monarch-btn-dark {
+  background: var(--monarch-obsidian);
+  color: #FFFFFF;
+  border: 1px solid var(--monarch-obsidian);
+}
+.monarch-btn-dark:hover {
+  background: var(--monarch-obsidian-subtle);
+  box-shadow: 0 4px 18px rgba(24, 23, 22, 0.2);
+}
+.monarch-btn-outline {
+  background: transparent;
+  color: var(--monarch-obsidian);
+  border: 1px solid var(--monarch-obsidian);
+}
+.monarch-btn-outline:hover {
+  background: rgba(24, 23, 22, 0.05);
+}
+.monarch-btn-bronze {
+  background: var(--monarch-bronze);
+  color: #FFFFFF;
+  border: 1px solid var(--monarch-bronze);
+}
+.monarch-btn-bronze:hover {
+  background: var(--monarch-bronze-light);
+}
+
+/* Sections */
+.monarch-section {
+  padding: 8rem 0;
+  position: relative;
+}
+.monarch-eyebrow {
+  font-family: var(--font-monarch-sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--monarch-bronze);
+  margin-bottom: 1rem;
+  display: block;
+}
+.monarch-title {
+  font-family: var(--font-monarch-serif);
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-weight: 300;
+  color: var(--monarch-obsidian);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+/* Hero Section */
+.monarch-hero {
+  padding: 7rem 0 8.5rem;
+  border-bottom: 1px solid var(--monarch-border);
+}
+.monarch-hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 5rem;
+  align-items: center;
+}
+.monarch-hero-title {
+  font-family: var(--font-monarch-serif);
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
+  font-weight: 300;
+  color: var(--monarch-obsidian);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+.monarch-hero-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--monarch-bronze);
+}
+.monarch-hero-desc {
+  font-size: 1.15rem;
+  color: var(--monarch-text-muted);
+  line-height: 1.9;
+  max-width: 580px;
+  margin-bottom: 2.75rem;
+}
+
+/* Minimalist Architecture Portfolio Grid */
+.monarch-works-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+}
+.monarch-work-card {
+  display: flex;
+  flex-direction: column;
+}
+.monarch-work-image {
+  height: 480px;
+  background: var(--monarch-surface-stone);
+  border: 1px solid var(--monarch-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+.monarch-work-image:hover {
+  transform: scale(0.99);
+}
+
+/* Private Practice Monograph Strip */
+.monarch-monograph-box {
+  background: var(--monarch-obsidian);
+  color: #EDE8DF;
+  padding: 5rem;
+  border: 1px solid var(--monarch-border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Commission Inquiry */
+.monarch-inquiry-box {
+  background: #FFFFFF;
+  border: 1px solid var(--monarch-border-bronze);
+  padding: 4.5rem 3.5rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.monarch-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--monarch-bg);
+  border: 1px solid var(--monarch-border);
+  color: var(--monarch-text);
+  font-family: var(--font-monarch-body);
+  font-size: 0.875rem;
+  outline: none;
+}
+.monarch-input:focus {
+  border-color: var(--monarch-bronze);
+}
+
+/* Footer */
+.monarch-footer {
+  background: #121110;
+  color: #A39E96;
+  border-top: 1px solid var(--monarch-border);
+  padding: 6rem 0 3rem;
+  font-size: 0.8125rem;
+}
+
+@media (max-width: 992px) {
+  .monarch-nav-links {
+    display: none;
+  }
+  .monarch-hero-grid, .monarch-works-grid, .monarch-monograph-box {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "HAVEN — Digital Experience Studio",
+  "description": "HAVEN designs and engineers bespoke, high-performance websites and digital experiences for modern businesses, creators, restaurants, gaming organizations, and startups.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

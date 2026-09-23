@@ -1,0 +1,483 @@
+/* ==========================================================================
+   VINTAGE OSTERIA & CELLAR // BRAND DESIGN SYSTEM
+   Domain: Michelin-Star Gastronomy, Wood-Fired Hearth & Rare Wine Vault
+   Aesthetic: Warm Ivory, Deep Burgundy, Muted Olive, Warm Espresso & Champagne Gold
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --vintage-bg: #FAF7F2;
+  --vintage-surface: #FFFFFF;
+  --vintage-surface-warm: #F4EFE6;
+  --vintage-surface-cream: #EFE9DD;
+  --vintage-border: rgba(107, 23, 36, 0.14);
+  --vintage-border-gold: rgba(194, 155, 83, 0.35);
+
+  --vintage-burgundy: #6B1724;
+  --vintage-burgundy-dark: #4A0E17;
+  --vintage-burgundy-light: #872333;
+  --vintage-olive: #4E593A;
+  --vintage-olive-light: #6A7751;
+  --vintage-gold: #C29B53;
+  --vintage-gold-hover: #D8B26C;
+  --vintage-espresso: #261B14;
+  --vintage-text: #261B14;
+  --vintage-text-muted: #6B6258;
+  --vintage-text-dim: #998E84;
+
+  --font-vintage-serif: 'Playfair Display', Georgia, serif;
+  --font-vintage-italic: 'Cormorant Garamond', Georgia, serif;
+  --font-vintage-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.vintage-theme {
+  background-color: var(--vintage-bg);
+  color: var(--vintage-text);
+  font-family: var(--font-vintage-sans);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(194, 155, 83, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 90% 90%, rgba(107, 23, 36, 0.05) 0%, transparent 50%);
+}
+
+/* Studio Preview Bar (Discreet Top Bar in Vintage Burgundy Style) */
+.haven-preview-bar {
+  background: #2D0B11;
+  border-bottom: 1px solid rgba(194, 155, 83, 0.3);
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font-vintage-sans);
+  font-size: 0.75rem;
+  position: relative;
+  z-index: 999;
+}
+.haven-preview-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.haven-preview-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #EADBC8;
+}
+.haven-pill-studio {
+  background: rgba(194, 155, 83, 0.25);
+  color: var(--vintage-gold);
+  padding: 0.15rem 0.55rem;
+  border-radius: 2px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.haven-preview-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.haven-back-link {
+  color: #D9C8B5;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.haven-back-link:hover {
+  color: #FFFFFF;
+}
+.haven-adopt-btn {
+  background: var(--vintage-gold);
+  color: #2D0B11;
+  padding: 0.3rem 0.85rem;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.6875rem;
+  transition: background 0.2s;
+}
+.haven-adopt-btn:hover {
+  background: #E8C480;
+}
+
+/* Container */
+.vintage-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Standalone Vintage Navigation */
+.vintage-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 247, 242, 0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--vintage-border);
+}
+.vintage-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 86px;
+}
+.vintage-brand {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.vintage-brand-title {
+  font-family: var(--font-vintage-serif);
+  font-size: 1.85rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--vintage-burgundy);
+}
+.vintage-brand-sub {
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--vintage-olive);
+  font-weight: 600;
+}
+
+.vintage-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.25rem;
+}
+.vintage-nav-link {
+  font-family: var(--font-vintage-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--vintage-text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 0.5rem 0;
+}
+.vintage-nav-link:hover, .vintage-nav-link.active {
+  color: var(--vintage-burgundy);
+}
+
+.vintage-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.85rem;
+  font-family: var(--font-vintage-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border-radius: 2px;
+}
+.vintage-btn-burgundy {
+  background: var(--vintage-burgundy);
+  color: #FFFFFF;
+  border: 1px solid var(--vintage-burgundy);
+}
+.vintage-btn-burgundy:hover {
+  background: var(--vintage-burgundy-dark);
+  border-color: var(--vintage-burgundy-dark);
+  box-shadow: 0 4px 18px rgba(107, 23, 36, 0.25);
+}
+.vintage-btn-outline {
+  background: transparent;
+  color: var(--vintage-burgundy);
+  border: 1px solid var(--vintage-burgundy);
+}
+.vintage-btn-outline:hover {
+  background: rgba(107, 23, 36, 0.06);
+}
+.vintage-btn-gold {
+  background: var(--vintage-gold);
+  color: #FFFFFF;
+  border: 1px solid var(--vintage-gold);
+}
+.vintage-btn-gold:hover {
+  background: var(--vintage-gold-hover);
+}
+
+/* Sections */
+.vintage-section {
+  padding: 6.5rem 0;
+  position: relative;
+}
+.vintage-eyebrow {
+  font-family: var(--font-vintage-italic);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--vintage-olive);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.vintage-title {
+  font-family: var(--font-vintage-serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.75rem);
+  font-weight: 600;
+  color: var(--vintage-burgundy);
+  line-height: 1.15;
+}
+
+/* Hero */
+.vintage-hero {
+  padding: 5.5rem 0 6.5rem;
+  border-bottom: 1px solid var(--vintage-border);
+  background: linear-gradient(180deg, #FAF7F2 0%, #F5EFE6 100%);
+}
+.vintage-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+}
+.vintage-hero-title {
+  font-family: var(--font-vintage-serif);
+  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+  font-weight: 600;
+  color: var(--vintage-burgundy-dark);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.vintage-hero-title em {
+  font-family: var(--font-vintage-italic);
+  font-weight: 400;
+  color: var(--vintage-olive);
+}
+.vintage-hero-desc {
+  font-size: 1.1rem;
+  color: var(--vintage-text-muted);
+  line-height: 1.8;
+  margin-bottom: 2.25rem;
+}
+
+.vintage-hero-card {
+  background: var(--vintage-surface);
+  border: 1px solid var(--vintage-border-gold);
+  padding: 2.5rem;
+  box-shadow: 0 15px 40px rgba(78, 30, 20, 0.06);
+  position: relative;
+}
+.vintage-hero-card::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 1px dashed var(--vintage-border-gold);
+  pointer-events: none;
+}
+
+/* Quick Reservation Bar */
+.vintage-res-bar {
+  background: var(--vintage-surface);
+  border: 1px solid var(--vintage-border);
+  padding: 1.5rem 2rem;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+.vintage-res-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 1.25rem;
+  align-items: end;
+}
+.vintage-input-group label {
+  display: block;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--vintage-burgundy);
+  margin-bottom: 0.4rem;
+}
+.vintage-input {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  background: var(--vintage-surface-warm);
+  border: 1px solid rgba(107, 23, 36, 0.2);
+  color: var(--vintage-text);
+  font-family: var(--font-vintage-sans);
+  font-size: 0.875rem;
+  outline: none;
+  border-radius: 2px;
+}
+.vintage-input:focus {
+  border-color: var(--vintage-burgundy);
+}
+
+/* Dishes & Menu */
+.vintage-dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.vintage-dish-card {
+  background: var(--vintage-surface);
+  border: 1px solid var(--vintage-border);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.vintage-dish-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(107, 23, 36, 0.08);
+}
+.vintage-dish-badge {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--vintage-olive);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.vintage-dish-name {
+  font-family: var(--font-vintage-serif);
+  font-size: 1.45rem;
+  color: var(--vintage-burgundy);
+  margin-bottom: 0.75rem;
+}
+.vintage-dish-desc {
+  font-size: 0.875rem;
+  color: var(--vintage-text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.vintage-dish-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: 1px dashed var(--vintage-border);
+  padding-top: 1rem;
+}
+.vintage-dish-price {
+  font-family: var(--font-vintage-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--vintage-burgundy);
+}
+.vintage-dish-wine {
+  font-family: var(--font-vintage-italic);
+  font-style: italic;
+  font-size: 0.875rem;
+  color: var(--vintage-olive);
+}
+
+/* Menu Course Columns */
+.vintage-menu-section {
+  background: var(--vintage-surface-warm);
+  border-top: 1px solid var(--vintage-border);
+  border-bottom: 1px solid var(--vintage-border);
+}
+.vintage-courses-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.vintage-course-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--vintage-border);
+}
+.vintage-course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+}
+.vintage-course-title {
+  font-family: var(--font-vintage-serif);
+  font-size: 1.2rem;
+  color: var(--vintage-burgundy-dark);
+}
+.vintage-course-price {
+  font-family: var(--font-vintage-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--vintage-gold);
+}
+
+/* Wine Cellar Vault Box */
+.vintage-cellar-box {
+  background: #2D0B11;
+  color: #FAF7F2;
+  border: 1px solid rgba(194, 155, 83, 0.4);
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Gallery Grid */
+.vintage-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.vintage-gallery-item {
+  height: 260px;
+  background: var(--vintage-surface-warm);
+  border: 1px solid var(--vintage-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Footer */
+.vintage-footer {
+  background: #1E120D;
+  color: #D6CCC2;
+  border-top: 1px solid rgba(194, 155, 83, 0.3);
+  padding: 5rem 0 2.5rem;
+}
+
+@media (max-width: 992px) {
+  .vintage-nav-links {
+    display: none;
+  }
+  .vintage-hero-grid, .vintage-dishes-grid, .vintage-courses-grid, .vintage-cellar-box {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .vintage-res-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .vintage-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .vintage-res-grid {
+    grid-template-columns: 1fr;
+  }
+  .vintage-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}

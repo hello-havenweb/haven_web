@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Templates — HAVEN Digital Experience Studio</title>
+    <meta name="description" content="Explore HAVEN's curated catalogue of luxury digital flagships. Domain-specific website archetypes for gaming, gastronomy, technology, business, and executive brands." />
+    <meta property="og:title" content="Templates — HAVEN Digital Experience Studio" />
+    <meta property="og:description" content="Six curated, production-ready website archetypes engineered with architectural restraint." />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Site Header / Navbar -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="index.html" class="nav-brand">
+          <span>HAVEN</span>
+          <span class="nav-brand-tag">/ STUDIO</span>
+        </a>
+
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="templates.html" class="nav-link active">Templates</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="currency-selector" title="Switch Pricing Currency">
+            <span class="currency-code-display">USD</span>
+            <select class="currency-select" aria-label="Currency Selector">
+              <option value="USD">USD ($)</option>
+              <option value="PKR">PKR (₨)</option>
+              <option value="GBP">GBP (£)</option>
+              <option value="EUR">EUR (€)</option>
+              <option value="AED">AED</option>
+              <option value="SAR">SAR</option>
+              <option value="CAD">CAD</option>
+              <option value="AUD">AUD</option>
+              <option value="INR">INR (₹)</option>
+              <option value="BDT">BDT (৳)</option>
+              <option value="MYR">MYR (RM)</option>
+            </select>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary nav-cta">Start a Project</a>
+
+          <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer" aria-label="Mobile Navigation">
+      <ul class="mobile-links">
+        <li><a href="index.html" class="mobile-link">Home</a></li>
+        <li><a href="services.html" class="mobile-link">Services</a></li>
+        <li><a href="templates.html" class="mobile-link active">Templates</a></li>
+        <li><a href="pricing.html" class="mobile-link">Pricing</a></li>
+        <li><a href="about.html" class="mobile-link">About</a></li>
+        <li><a href="contact.html" class="mobile-link">Contact</a></li>
+      </ul>
+      <div style="padding-top: 2rem;">
+        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Start a Project</a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Header -->
+      <section class="section" style="padding-top: 9.5rem; padding-bottom: 4rem;">
+        <div class="container">
+          <div class="reveal">
+            <div class="eyebrow-wrapper">
+              <span class="type-eyebrow">CURATED FLAGSHIPS</span>
+              <span class="eyebrow-divider">/</span>
+              <span style="font-size: 0.6875rem; color: var(--text-muted); text-transform: uppercase;">CATALOGUE</span>
+            </div>
+            <h1 class="type-hero" style="max-width: 860px; margin-bottom: 1.5rem;">
+              Designed to be remembered.
+            </h1>
+            <p class="type-lead" style="max-width: 600px;">
+              Curated digital flagships ready for bespoke customization and deployment. Each archetype is engineered with domain-specific architecture and zero boilerplate code.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filter & Search Toolbar -->
+      <section style="padding-bottom: 3rem;">
+        <div class="container">
+          <div style="display: flex; flex-direction: column; gap: 1.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-subtle);">
+            <!-- Search Input -->
+            <div style="max-width: 480px; width: 100%;">
+              <input 
+                type="text" 
+                id="template-search" 
+                class="form-input" 
+                placeholder="Search templates by name, domain, or feature..." 
+                aria-label="Search templates"
+                style="padding: 0.75rem 1rem; font-size: 0.875rem;"
+              />
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.75rem; font-family: var(--font-body);">
+              <button class="btn btn-secondary btn-sm template-filter-btn active" data-filter="all">All</button>
+              <button class="btn btn-secondary btn-sm template-filter-btn" data-filter="business">Business</button>
+              <button class="btn btn-secondary btn-sm template-filter-btn" data-filter="gaming">Gaming</button>
+              <button class="btn btn-secondary btn-sm template-filter-btn" data-filter="restaurant">Restaurant</button>
+              <button class="btn btn-secondary btn-sm template-filter-btn" data-filter="creative">Creative</button>
+              <button class="btn btn-secondary btn-sm template-filter-btn" data-filter="technology">Technology</button>
+              <button class="btn btn-secondary btn-sm template-filter-btn" data-filter="portfolio">Portfolio</button>
+              <button class="btn btn-secondary btn-sm template-filter-btn" data-filter="professional">Professional</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Template Grid Showcase -->
+      <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+          <div id="templates-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem;">
+
+            <!-- 1. NEXUS -->
+            <div class="card template-card reveal" data-name="NEXUS" data-category="gaming esports portfolio" data-description="Cinematic gaming and esports team flagship with match schedules, player roster stats, and streaming integrations.">
+              <div style="aspect-ratio: 16/10; overflow: hidden; background: #06070A; margin-bottom: 1.25rem; border-radius: 2px;">
+                <img src="assets/images/template_nexus_preview_1790173130086.jpg" alt="NEXUS Esports Flagship Preview" style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
+                  <h2 style="font-size: 1.5rem;">NEXUS</h2>
+                  <span style="font-size: 0.6875rem; font-family: var(--font-mono); color: var(--accent); text-transform: uppercase;">GAMING / ESPORTS</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.75rem;">
+                  Starts at <span data-pricing-tier="tier1" style="color: var(--text-primary); font-weight: 600;">$129</span>
+                </div>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                  Engineered for competitive teams, gaming creators, and tournaments. Includes player roster cards, match schedule countdowns, trophy showcases, and stream embeds.
+                </p>
+              </div>
+              <div style="display: flex; gap: 0.75rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+                <a href="templates/nexus.html" class="btn btn-secondary btn-sm" style="flex: 1;">View Template</a>
+                <a href="contact.html?template=NEXUS" class="btn btn-primary btn-sm" style="flex: 1;">Get This Template</a>
+              </div>
+            </div>
+
+            <!-- 2. VINTAGE -->
+            <div class="card template-card reveal" data-name="VINTAGE" data-category="restaurant cafe gastronomy hospitality" data-description="High-end culinary restaurant showcase with seasonal menus, wine cellar reserves, and reservation requests.">
+              <div style="aspect-ratio: 16/10; overflow: hidden; background: #06070A; margin-bottom: 1.25rem; border-radius: 2px;">
+                <img src="assets/images/template_vintage_preview_1790173141815.jpg" alt="VINTAGE Restaurant Flagship Preview" style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
+                  <h2 style="font-size: 1.5rem;">VINTAGE</h2>
+                  <span style="font-size: 0.6875rem; font-family: var(--font-mono); color: var(--accent); text-transform: uppercase;">RESTAURANT / CAFE</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.75rem;">
+                  Starts at <span data-pricing-tier="tier1" style="color: var(--text-primary); font-weight: 600;">$129</span>
+                </div>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                  Editorial gastronomy architecture. Refined serif typography, mobile-first course menus, private dining concierge, and cellar highlights for restaurants and cafes.
+                </p>
+              </div>
+              <div style="display: flex; gap: 0.75rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+                <a href="templates/vintage.html" class="btn btn-secondary btn-sm" style="flex: 1;">View Template</a>
+                <a href="contact.html?template=VINTAGE" class="btn btn-primary btn-sm" style="flex: 1;">Get This Template</a>
+              </div>
+            </div>
+
+            <!-- 3. LUMI -->
+            <div class="card template-card reveal" data-name="LUMI" data-category="creative lifestyle portfolio fashion" data-description="Minimalist editorial design portfolio and atelier showcase with curated spreads and capsule releases.">
+              <div style="aspect-ratio: 16/10; overflow: hidden; background: #06070A; margin-bottom: 1.25rem; border-radius: 2px;">
+                <img src="assets/images/template_lumi_preview_1790173154102.jpg" alt="LUMI Lifestyle Flagship Preview" style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
+                  <h2 style="font-size: 1.5rem;">LUMI</h2>
+                  <span style="font-size: 0.6875rem; font-family: var(--font-mono); color: var(--accent); text-transform: uppercase;">CREATIVE / LIFESTYLE</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.75rem;">
+                  Starts at <span data-pricing-tier="tier1" style="color: var(--text-primary); font-weight: 600;">$129</span>
+                </div>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                  Conceived for design studios, fashion houses, and lifestyle creators. Features curated work galleries, collection lookbooks, and commission request flows.
+                </p>
+              </div>
+              <div style="display: flex; gap: 0.75rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+                <a href="templates/lumi.html" class="btn btn-secondary btn-sm" style="flex: 1;">View Template</a>
+                <a href="contact.html?template=LUMI" class="btn btn-primary btn-sm" style="flex: 1;">Get This Template</a>
+              </div>
+            </div>
+
+            <!-- 4. ORBIT -->
+            <div class="card template-card reveal" data-name="ORBIT" data-category="technology saas software cloud" data-description="Modern technology SaaS platform showcase with edge computing architecture, API specs, and interactive telemetry.">
+              <div style="aspect-ratio: 16/10; overflow: hidden; background: #06070A; margin-bottom: 1.25rem; border-radius: 2px;">
+                <img src="assets/images/template_orbit_venture_1790174945206.jpg" alt="ORBIT SaaS Flagship Preview" style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
+                  <h2 style="font-size: 1.5rem;">ORBIT</h2>
+                  <span style="font-size: 0.6875rem; font-family: var(--font-mono); color: var(--accent); text-transform: uppercase;">TECHNOLOGY / SAAS</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.75rem;">
+                  Starts at <span data-pricing-tier="tier1" style="color: var(--text-primary); font-weight: 600;">$129</span>
+                </div>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                  Tailored for developer tools, cloud platforms, and SaaS products. Features interactive telemetry demonstrations, API snippets, and security specifications.
+                </p>
+              </div>
+              <div style="display: flex; gap: 0.75rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+                <a href="templates/orbit.html" class="btn btn-secondary btn-sm" style="flex: 1;">View Template</a>
+                <a href="contact.html?template=ORBIT" class="btn btn-primary btn-sm" style="flex: 1;">Get This Template</a>
+              </div>
+            </div>
+
+            <!-- 5. NOVA -->
+            <div class="card template-card reveal" data-name="NOVA" data-category="business corporate professional advisory" data-description="Authoritative enterprise advisory and institutional consulting platform with practice areas and case studies.">
+              <div style="aspect-ratio: 16/10; overflow: hidden; background: #06070A; margin-bottom: 1.25rem; border-radius: 2px;">
+                <img src="assets/images/template_nova_executive_1790174960554.jpg" alt="NOVA Corporate Flagship Preview" style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
+                  <h2 style="font-size: 1.5rem;">NOVA</h2>
+                  <span style="font-size: 0.6875rem; font-family: var(--font-mono); color: var(--accent); text-transform: uppercase;">BUSINESS / CORPORATE</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.75rem;">
+                  Starts at <span data-pricing-tier="tier1" style="color: var(--text-primary); font-weight: 600;">$129</span>
+                </div>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                  Engineered for capital management firms, legal practices, and corporate consultancies. Clean structural hierarchy, practice areas, leadership rosters, and proof points.
+                </p>
+              </div>
+              <div style="display: flex; gap: 0.75rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+                <a href="templates/nova.html" class="btn btn-secondary btn-sm" style="flex: 1;">View Template</a>
+                <a href="contact.html?template=NOVA" class="btn btn-primary btn-sm" style="flex: 1;">Get This Template</a>
+              </div>
+            </div>
+
+            <!-- 6. MONARCH -->
+            <div class="card template-card reveal" data-name="MONARCH" data-category="professional personal portfolio executive" data-description="Luxury executive monograph and thought leadership platform for keynote speakers, advisors, and authors.">
+              <div style="aspect-ratio: 16/10; overflow: hidden; background: #06070A; margin-bottom: 1.25rem; border-radius: 2px;">
+                <img src="assets/images/template_monarch_preview_1790173166644.jpg" alt="MONARCH Personal Brand Flagship Preview" style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem;">
+                  <h2 style="font-size: 1.5rem;">MONARCH</h2>
+                  <span style="font-size: 0.6875rem; font-family: var(--font-mono); color: var(--accent); text-transform: uppercase;">PROFESSIONAL / PERSONAL</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 0.75rem;">
+                  Starts at <span data-pricing-tier="tier1" style="color: var(--text-primary); font-weight: 600;">$129</span>
+                </div>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                  Designed for keynote speakers, authors, executives, and high-level advisors. Features an executive monograph, curated keynote topics, publication indices, and booking inquiries.
+                </p>
+              </div>
+              <div style="display: flex; gap: 0.75rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+                <a href="templates/monarch.html" class="btn btn-secondary btn-sm" style="flex: 1;">View Template</a>
+                <a href="contact.html?template=MONARCH" class="btn btn-primary btn-sm" style="flex: 1;">Get This Template</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Empty search state -->
+          <div id="templates-empty-state" style="display: none; text-align: center; padding: 4rem 1rem;">
+            <div style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 1rem;">No matching templates found</div>
+            <p style="font-size: 0.875rem; color: var(--text-muted); max-width: 400px; margin: 0 auto 1.5rem auto;">
+              Try a different keyword or category filter, or commission a completely bespoke website built to your specifications.
+            </p>
+            <a href="contact.html" class="btn btn-primary btn-sm">Commission Custom Website</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Custom Request Notice -->
+      <section class="section" style="background-color: #06070A;">
+        <div class="container" style="text-align: center;">
+          <div class="reveal">
+            <span class="type-eyebrow">BESPOKE ARCHITECTURE</span>
+            <h2 class="type-section-title" style="margin-top: 1rem; margin-bottom: 1.25rem;">
+              Need something engineered completely from zero?
+            </h2>
+            <p class="type-lead" style="max-width: 580px; margin: 0 auto 2.5rem auto;">
+              Our templates serve as demonstrated baselines. We frequently engineer 100% custom digital experiences conceived exclusively for unique commercial visions.
+            </p>
+            <a href="contact.html?template=Bespoke" class="btn btn-primary">Start a Custom Project Brief →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <a href="index.html" class="footer-brand">HAVEN</a>
+            <div class="footer-subtitle">Digital Experiences</div>
+            <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+              An independent digital experience studio. We build bespoke websites and luxury flagships for brands that value distinction and craft.
+            </p>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">
+              Inquiries: <a href="mailto:hello.havenweb@gmail.com" style="color: var(--accent);">hello.havenweb@gmail.com</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="templates.html">Templates</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Templates</h4>
+            <ul class="footer-links">
+              <li><a href="templates/nexus.html">Nexus (Gaming)</a></li>
+              <li><a href="templates/vintage.html">Vintage (Restaurant)</a></li>
+              <li><a href="templates/lumi.html">Lumi (Creative)</a></li>
+              <li><a href="templates/orbit.html">Orbit (SaaS)</a></li>
+              <li><a href="templates/nova.html">Nova (Corporate)</a></li>
+              <li><a href="templates/monarch.html">Monarch (Personal)</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Legal & Info</h4>
+            <ul class="footer-links">
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms & Conditions</a></li>
+              <li><a href="pricing.html">Pricing Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>© 2026 HAVEN. All rights reserved. Professional Website Building Studio.</div>
+          <div>Designed with architectural restraint.</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
